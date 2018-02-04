@@ -9,7 +9,10 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 
-REQUIREMENTS = ['tornado',
+REQUIREMENTS = [
+                'html5print',
+                'jinja2',
+                'tornado',
                 ]
 
 

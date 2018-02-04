@@ -19,12 +19,11 @@ def main():
                         action='store_true')
     args = parser.parse_args()
 
-    logging.basicConfig()
 
     if args.devel:
-        _LOGGER.setLevel(logging.DEBUG)
+        logging.basicConfig(level=logging.DEBUG)
     else:
-        _LOGGER.setLevel(logging.INFO)
+        logging.basicConfig(level=logging.INFO)
 
     _LOGGER.debug(f'Arguments passed {args!r}')
 
