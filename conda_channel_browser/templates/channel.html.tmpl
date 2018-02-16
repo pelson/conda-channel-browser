@@ -1,0 +1,11 @@
+{% extends "base.html.tmpl" %}
+
+{% block content %}
+
+Channel content:
+<ul>
+{% for pkg, binaries in channel.packages.items()|sort %}
+<li>{{ pkg }} ({{ binaries|length }})</li>
+{% endfor %}
+</ul>
+{% endblock %}
